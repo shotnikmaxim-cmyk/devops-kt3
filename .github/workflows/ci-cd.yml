@@ -16,11 +16,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Inspect checkout files
-        run: |
-          pwd
-          ls -la
-          test -f package-lock.json && head -n 6 package-lock.json || echo 'package-lock.json missing'
       - name: Set up Node.js 20
         uses: actions/setup-node@v4
         with:
@@ -93,4 +88,3 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ github.sha }}
-
