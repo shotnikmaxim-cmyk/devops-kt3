@@ -7,7 +7,7 @@ describe('HTTP routes', () => {
     const response = await request(app).get('/');
 
     expect(response.status).toBe(200);
-    expect(response.text).toBe('BROKEN TEST');
+    expect(response.text).toBe('KT3 App');
   });
 
   test('GET /health returns an ok status', async () => {
